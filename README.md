@@ -13,18 +13,18 @@
 
 ## 設計原則列表
 
-| 原則 | 說明 |
-|------|------|
-| 關聯性原則 (Proximity) | 相關的元素應該放在一起，不相關的元素應該分開 |
-| 對齊原則 (Alignment) | 元素應該有視覺上的對齊，創造整齊有序的外觀 |
-| 對比原則 (Contrast) | 使用對比來突出重要元素，建立視覺層次 |
-| 重複原則 (Repetition) | 重複使用相同的設計元素，建立一致性 |
-| 直觀操作原則 (Direct Manipulation) | 讓使用者直接操作物件，而非透過間接指令 |
-| 留在相同頁面原則 (Stay on Page) | 避免不必要的頁面跳轉，保持使用者的上下文 |
-| 易用性原則 (Usability) | 提供足夠大的點擊區域，讓操作更容易 |
-| 引導原則 (Guidance) | 提供提示和線索，引導使用者完成互動 |
-| 過渡動畫原則 (Transition) | 使用動畫來提供視覺反饋，增強溝通效果 |
-| 立即反應原則 (Immediate Reaction) | 系統應即時回應使用者的操作 |
+| 原則                           | 說明                     |
+|------------------------------|------------------------|
+| 關聯性原則 (Proximity)            | 相關的元素應該放在一起，不相關的元素應該分開 |
+| 對齊原則 (Alignment)             | 元素應該有視覺上的對齊，創造整齊有序的外觀  |
+| 對比原則 (Contrast)              | 使用對比來突出重要元素，建立視覺層次     |
+| 重複原則 (Repetition)            | 重複使用相同的設計元素，建立一致性      |
+| 直觀操作原則 (Direct Manipulation) | 讓使用者直接操作物件，而非透過間接指令    |
+| 留在相同頁面原則 (Stay on Page)      | 避免不必要的頁面跳轉，保持使用者的上下文   |
+| 易用性原則 (Usability)            | 提供足夠大的點擊區域，讓操作更容易      |
+| 引導原則 (Guidance)              | 提供提示和線索，引導使用者完成互動      |
+| 過渡動畫原則 (Transition)          | 使用動畫來提供視覺反饋，增強溝通效果     |
+| 立即反應原則 (Immediate Reaction)  | 系統應即時回應使用者的操作          |
 
 ## 技術棧
 
@@ -45,7 +45,7 @@
 
 ```bash
 # 複製專案
-git clone https://github.com/NSYSU-OpenDev/principle-of-ui-ux.git
+git clone https://github.com/whats2000/principle-of-ui-ux.git
 
 # 進入專案目錄
 cd principle-of-ui-ux
