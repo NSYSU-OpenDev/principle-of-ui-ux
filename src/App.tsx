@@ -6,6 +6,7 @@ import {
   HighlightOutlined,
   CopyOutlined,
   DragOutlined,
+  LayoutOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -14,6 +15,7 @@ import AlignmentPrinciple from './components/principles/AlignmentPrinciple';
 import ContrastPrinciple from './components/principles/ContrastPrinciple';
 import RepetitionPrinciple from './components/principles/RepetitionPrinciple';
 import DirectManipulationPrinciple from './components/principles/DirectManipulationPrinciple';
+import StayOnPagePrinciple from './components/principles/StayOnPagePrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -47,6 +49,11 @@ const menuItems: MenuItem[] = [
     label: '直觀操作原則',
   },
   {
+    key: 'stay-on-page',
+    icon: <LayoutOutlined />,
+    label: '留在相同頁面原則',
+  },
+  {
     key: 'coming-soon',
     icon: <ExperimentOutlined />,
     label: '更多原則（即將推出）',
@@ -73,6 +80,8 @@ function App() {
         return <RepetitionPrinciple />;
       case 'direct-manipulation':
         return <DirectManipulationPrinciple />;
+      case 'stay-on-page':
+        return <StayOnPagePrinciple />;
       default:
         return <ProximityPrinciple />;
     }
