@@ -3,11 +3,13 @@ import { Layout, Menu, Typography, theme, ConfigProvider } from 'antd';
 import {
   GroupOutlined,
   AlignLeftOutlined,
+  HighlightOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import ProximityPrinciple from './components/principles/ProximityPrinciple';
 import AlignmentPrinciple from './components/principles/AlignmentPrinciple';
+import ContrastPrinciple from './components/principles/ContrastPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -24,6 +26,11 @@ const menuItems: MenuItem[] = [
     key: 'alignment',
     icon: <AlignLeftOutlined />,
     label: '對齊原則',
+  },
+  {
+    key: 'contrast',
+    icon: <HighlightOutlined />,
+    label: '對比原則',
   },
   {
     key: 'coming-soon',
@@ -46,6 +53,8 @@ function App() {
         return <ProximityPrinciple />;
       case 'alignment':
         return <AlignmentPrinciple />;
+      case 'contrast':
+        return <ContrastPrinciple />;
       default:
         return <ProximityPrinciple />;
     }
