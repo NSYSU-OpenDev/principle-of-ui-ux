@@ -9,6 +9,7 @@ import {
   LayoutOutlined,
   AimOutlined,
   CompassOutlined,
+  PlayCircleOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -20,6 +21,7 @@ import DirectManipulationPrinciple from './components/principles/DirectManipulat
 import StayOnPagePrinciple from './components/principles/StayOnPagePrinciple';
 import UsabilityPrinciple from './components/principles/UsabilityPrinciple';
 import GuidancePrinciple from './components/principles/GuidancePrinciple';
+import TransitionPrinciple from './components/principles/TransitionPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -68,6 +70,11 @@ const menuItems: MenuItem[] = [
     label: '引導原則',
   },
   {
+    key: 'transition',
+    icon: <PlayCircleOutlined />,
+    label: '過渡動畫原則',
+  },
+  {
     key: 'coming-soon',
     icon: <ExperimentOutlined />,
     label: '更多原則（即將推出）',
@@ -100,6 +107,8 @@ function App() {
         return <UsabilityPrinciple />;
       case 'guidance':
         return <GuidancePrinciple />;
+      case 'transition':
+        return <TransitionPrinciple />;
       default:
         return <ProximityPrinciple />;
     }
