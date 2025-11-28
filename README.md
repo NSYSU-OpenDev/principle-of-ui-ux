@@ -2,6 +2,8 @@
 
 一個互動式的網頁應用程式，用於展示和教學 UI/UX 設計原則。讓學生能夠對比正確與錯誤的設計，並直接體驗各種設計原則的效果。
 
+本專案的設計原則靈感來自 [Ant Design 的設計規範](https://ant.design/docs/spec/introduce)，該規範說明了 10 個設計原則，並基於案例提供設計示範。
+
 🔗 **線上展示**: [https://whats2000.github.io/principle-of-ui-ux/](https://whats2000.github.io/principle-of-ui-ux/)
 
 ## 功能特色
@@ -105,8 +107,8 @@ src/
 
 ## 參考資料
 
-- [Ant Design 設計價值](https://ant.design/docs/spec/values-cn)
-- [設計原則 - Ant Design](https://ant.design/docs/spec/proximity-cn)
+- [Ant Design Design Values](https://ant.design/docs/spec/values)
+- [Design Principles - Ant Design](https://ant.design/docs/spec/proximity)
 
 ## 授權
 
