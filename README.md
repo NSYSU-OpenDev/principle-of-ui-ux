@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# UI/UX 設計原則互動展示
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一個互動式的網頁應用程式，用於展示和教學 UI/UX 設計原則。讓學生能夠對比正確與錯誤的設計，並直接體驗各種設計原則的效果。
 
-Currently, two official plugins are available:
+🔗 **線上展示**: [https://nsysu-opendev.github.io/principle-of-ui-ux/](https://nsysu-opendev.github.io/principle-of-ui-ux/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 功能特色
 
-## React Compiler
+- 📚 **10 個設計原則** - 涵蓋 UI/UX 設計的核心概念
+- 🔄 **即時對比** - 一鍵切換正確與錯誤的設計範例
+- 🎯 **互動體驗** - 親自操作感受設計差異
+- 📱 **響應式設計** - 支援各種螢幕尺寸
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 設計原則列表
 
-## Expanding the ESLint configuration
+| 原則 | 說明 |
+|------|------|
+| 關聯性原則 (Proximity) | 相關的元素應該放在一起，不相關的元素應該分開 |
+| 對齊原則 (Alignment) | 元素應該有視覺上的對齊，創造整齊有序的外觀 |
+| 對比原則 (Contrast) | 使用對比來突出重要元素，建立視覺層次 |
+| 重複原則 (Repetition) | 重複使用相同的設計元素，建立一致性 |
+| 直觀操作原則 (Direct Manipulation) | 讓使用者直接操作物件，而非透過間接指令 |
+| 留在相同頁面原則 (Stay on Page) | 避免不必要的頁面跳轉，保持使用者的上下文 |
+| 易用性原則 (Usability) | 提供足夠大的點擊區域，讓操作更容易 |
+| 引導原則 (Guidance) | 提供提示和線索，引導使用者完成互動 |
+| 過渡動畫原則 (Transition) | 使用動畫來提供視覺反饋，增強溝通效果 |
+| 立即反應原則 (Immediate Reaction) | 系統應即時回應使用者的操作 |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 技術棧
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ⚛️ **React 18** - 前端框架
+- 📘 **TypeScript** - 型別安全
+- 🐜 **Ant Design 6** - UI 元件庫
+- ⚡ **Vite (Rolldown)** - 建構工具
+- 🎨 **CSS-in-JS** - 樣式方案
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 開始使用
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### 環境需求
+
+- Node.js 18+
+- npm 或 yarn
+
+### 安裝
+
+```bash
+# 複製專案
+git clone https://github.com/NSYSU-OpenDev/principle-of-ui-ux.git
+
+# 進入專案目錄
+cd principle-of-ui-ux
+
+# 安裝依賴
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 開發
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+# 啟動開發伺服器
+npm run dev
 ```
+
+開啟瀏覽器訪問 [http://localhost:5173](http://localhost:5173)
+
+### 建構
+
+```bash
+# 建構生產版本
+npm run build
+
+# 預覽建構結果
+npm run preview
+```
+
+### 程式碼品質
+
+```bash
+# 執行 ESLint 檢查
+npm run lint
+
+# 格式化程式碼
+npm run format
+```
+
+## 專案結構
+
+```
+src/
+├── components/
+│   └── principles/          # 各設計原則的展示元件
+│       ├── ProximityPrinciple.tsx
+│       ├── AlignmentPrinciple.tsx
+│       ├── ContrastPrinciple.tsx
+│       ├── RepetitionPrinciple.tsx
+│       ├── DirectManipulationPrinciple.tsx
+│       ├── StayOnPagePrinciple.tsx
+│       ├── UsabilityPrinciple.tsx
+│       ├── GuidancePrinciple.tsx
+│       ├── TransitionPrinciple.tsx
+│       └── ImmediateReactionPrinciple.tsx
+├── App.tsx                  # 主應用元件
+└── main.tsx                 # 應用入口
+```
+
+## 參考資料
+
+- [Ant Design 設計價值](https://ant.design/docs/spec/values-cn)
+- [設計原則 - Ant Design](https://ant.design/docs/spec/proximity-cn)
+
+## 授權
+
+MIT License
+
+## 貢獻
+
+歡迎提交 Issue 和 Pull Request！
