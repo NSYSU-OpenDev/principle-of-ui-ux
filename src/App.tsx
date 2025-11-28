@@ -5,6 +5,7 @@ import {
   AlignLeftOutlined,
   HighlightOutlined,
   CopyOutlined,
+  DragOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -12,6 +13,7 @@ import ProximityPrinciple from './components/principles/ProximityPrinciple';
 import AlignmentPrinciple from './components/principles/AlignmentPrinciple';
 import ContrastPrinciple from './components/principles/ContrastPrinciple';
 import RepetitionPrinciple from './components/principles/RepetitionPrinciple';
+import DirectManipulationPrinciple from './components/principles/DirectManipulationPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -40,6 +42,11 @@ const menuItems: MenuItem[] = [
     label: '重複原則',
   },
   {
+    key: 'direct-manipulation',
+    icon: <DragOutlined />,
+    label: '直觀操作原則',
+  },
+  {
     key: 'coming-soon',
     icon: <ExperimentOutlined />,
     label: '更多原則（即將推出）',
@@ -64,6 +71,8 @@ function App() {
         return <ContrastPrinciple />;
       case 'repetition':
         return <RepetitionPrinciple />;
+      case 'direct-manipulation':
+        return <DirectManipulationPrinciple />;
       default:
         return <ProximityPrinciple />;
     }
